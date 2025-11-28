@@ -2,22 +2,44 @@ body{
   font-family: "Jost", sans-serif;
   font-optical-sizing: auto;
   font-weight: 200;
-  font-style: normal;
+  font-style: normal;  ;
   max-width: 1280px;
   margin:auto; 
   width:95%;  /*falta mediaqueire*/
   justify-content: center;
+  background-color: rgb(251 245 238);
 }
 
 header{
     background-color: rgb(95 24 4);
-    border-radius: 3rem;
+    border-radius: 4rem;
     display:flex;
     justify-content: space-between;
     align-items: baseline;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 } 
 
 h1{
     padding-left:2rem;
     color:white;
+    font-size: 2rem;
+}
+
+img{
+  border-radius: 4rem;
+  }
+
+h2{font-family: "vastago", "arial", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2rem;
+        line-height: 1.2rem;}
+
+
+footer{
+  background-color:rgb(95 24 4);
+  border-radius: 4rem;
+  color: white;
+  padding:2rem;
 }
