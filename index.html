@@ -15,6 +15,21 @@
         <main> <!--crec que jo posaria es contingut amb un poc mes de marge que es header i es footer perque sino trob que queda raro-->
 
             <header>
+                <nav class="menu-navegacio"> 
+                    
+                    <button class="hamburguesa" id="menu-toggle" aria-expanded="false" aria-controls="menu-vertical">
+                        <span class="barres"></span>
+                        <span class="barres"></span>
+                        <span class="barres"></span>
+                    </button>
+
+                    <ul class="menu-vertical" id="menu-vertical">
+                        <li><a href="#">Inici</a></li>
+                        <li><a href="#">Restaurants</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Contacte</a></li>
+                    </ul>
+                </nav>
                 <img src="./imatges/logo_daixonar.png" alt="Logo Daixonar" width="200">
                     <nav> 
                         <!--aqui no se si hi anirien es menu, sa lupa y eso-->
@@ -46,6 +61,6 @@
                 </article>
         </main>
         <footer>Peu de pagina </footer>
-
+    <script src="hamburguesa.js"></script>
     </body>
 </html>

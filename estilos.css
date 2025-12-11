@@ -15,10 +15,11 @@ header{
   background-color: rgb(95 24 4);
   border-radius: 4rem;
   display:flex;
-  justify-content: space-between;
   align-items: center;
   margin-top: 2rem;
   margin-bottom: 4rem;
+  position: relative; 
+  width: 100%; /* S'ha afegit per a la gestió de l'amplada */
 }
 
 .carrusel {
@@ -91,4 +92,85 @@ footer{
   padding:2rem;
   margin-top:2rem;
   margin-bottom:2rem;
+}
+
+.hamburguesa {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px; 
+    height: 25px; 
+    margin-right: 2px; 
+    margin-left: 20px;
+    z-index: 1000;
+    border: none; 
+    background: transparent; 
+    padding: 0;
+}
+
+.barres {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white; 
+    border-radius: 1px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Estils per a la llista d'enllaços (el menú vertical) */
+.menu-vertical {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute; 
+    top: 100%; 
+    left: 29%;
+    width: 250px; 
+    background-color: rgb(75 18 3); 
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    
+    /* 🌟 MODIFICACIONS CLAU PER AMAGAR/MOSTRAR */
+    max-height: 0; /* Estat inicial: Amagat */
+    overflow: hidden; /* Amaga el contingut que desborda max-height: 0 */
+    transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out; 
+    opacity: 0; /* Ajuda a amagar-lo completament */
+}
+
+.menu-vertical li a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu-vertical li a:hover {
+    background-color: rgb(115 28 5);
+}
+
+/* **ESTAT OBERT (CONTROLAT PER JAVASCRIPT)** */
+
+/* Quan la classe 'obert' s'afegeix al menú, es mostra */
+.menu-vertical.obert {
+    /* 🌟 MODIFICACIÓ: Augmentem l'alçada màxima per mostrar el contingut */
+    max-height: 500px; /* Assegura't que aquest valor és major que l'alçada real del menú */
+    opacity: 1; 
+    /* Cal eliminar qualsevol 'transform' heretat si n'hi ha, encara que l'hem tret de l'estat inicial */
+    transform: none; 
+}
+
+/* Animació de l'icona quan s'afegeix la classe 'obert' al botó */
+.hamburguesa.obert .barres:nth-child(1) {
+    transform: translateY(8.75px) rotate(45deg);
+}
+
+.hamburguesa.obert .barres:nth-child(2) {
+    opacity: 0; 
+}
+
+.hamburguesa.obert .barres:nth-child(3) {
+    transform: translateY(-8.75px) rotate(-45deg);
 }
