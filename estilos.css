@@ -21,6 +21,18 @@ body{
         margin-bottom: 4rem;
     } 
 
+    @media screen and (min-width:850px){
+       div{
+       display:flex;
+       flex-flow: row nowrap;
+       justify-content:space-between;
+       align-items:stretch;
+       gap: 1rem 1rem;
+       }
+        }
+
+        /*en formato movil tiene que ser mas estrecho pero para escritorio no! Se tiene que parecer a los mockups!*/
+
         h1{
             padding-left:4rem;
             color:white;
@@ -28,14 +40,14 @@ body{
         }
 
       img{
-        border-radius: 3rem;
+        border-radius: 2rem;
         }
 
       h2{
         font-family: "vastago", "arial", sans-serif;
         font-weight: 600;
         font-style: normal;
-        font-size: 2rem;
+        font-size: 1rem;
         line-height: 1.2rem;
       }
 
@@ -54,4 +66,21 @@ body{
       padding:2rem;
       margin-top:2rem;
       margin-bottom:2rem;
+    }
+
+    .slider-container{
+      scroll-snap-type: x mandatory;
+      display:flex;
+      width: 100%;
+      align-content: space-between;
+      overflow-x:scroll;
+      grid-gap:2rem;
+      max-width:50%;
+    }
+
+    .slider-container img{
+      scroll-snap-align: center;
+      flex: 0 0 100%;
+      width:100%;
+      object-fit:over;
     }
