@@ -85,14 +85,24 @@ h3{
 }
 
 footer{
-  width: 90%;
+  box-sizing: border-box; 
+  width: 100%; 
+  
   background-color:rgb(95 24 4);
-  border-radius: 4rem;
   color: white;
-  padding:2rem;
+  
+  padding: 3rem 2.5%; 
+  line-height: 1; 
+  
   margin-top:2rem;
-  margin-bottom:2rem;
-}
+  /* 🌟 CANVI CLAU: Eliminar el marge inferior */
+  margin-bottom: 0; 
+  
+  /* 🌟 CANVI CLAU: Ara només les cantonades superiors tenen radius */
+  border-radius: 2rem 2rem 0 0; 
+  font-size: 30px;
+  font-weight: 700;
+  }
 
 .hamburguesa {
     cursor: pointer;
