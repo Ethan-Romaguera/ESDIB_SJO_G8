@@ -123,54 +123,63 @@ footer{
     list-style: none;
     padding: 0;
     margin: 0;
-    position: absolute; 
-    top: 100%; 
-    left: 29%;
-    width: 250px; 
-    background-color: rgb(75 18 3); 
-    border-radius: 0 0 1rem 1rem;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    z-index: 999;
     
-    /* 🌟 MODIFICACIONS CLAU PER AMAGAR/MOSTRAR */
-    max-height: 0; /* Estat inicial: Amagat */
-    overflow: hidden; /* Amaga el contingut que desborda max-height: 0 */
-    transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out; 
-    opacity: 0; /* Ajuda a amagar-lo completament */
+    padding-top: 100px; 
+    
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 65vh; 
+    
+    background-color: #fbf5ee; 
+    border-bottom: 1px solid ; 
+    box-shadow: none; 
+    z-index: 9999; 
+    
+    /* 🌟 CANVI CLAU: Assegura't que el contingut que desborda les 50vh no sigui visible */
+    overflow: hidden; 
+    
+    transform: translateY(-100%); 
+    transition: transform 0.5s ease-in-out; 
+    opacity: 1; 
+    
+    display: flex;
+    flex-direction: column;
 }
 
 .menu-vertical li a {
     display: block;
     padding: 15px 20px;
     text-decoration: none;
-    color: white;
+    color: black;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .menu-vertical li a:hover {
-    background-color: rgb(115 28 5);
+    background-color: #7293bc;
 }
 
 /* **ESTAT OBERT (CONTROLAT PER JAVASCRIPT)** */
 
 /* Quan la classe 'obert' s'afegeix al menú, es mostra */
 .menu-vertical.obert {
-    /* 🌟 MODIFICACIÓ: Augmentem l'alçada màxima per mostrar el contingut */
-    max-height: 500px; /* Assegura't que aquest valor és major que l'alçada real del menú */
-    opacity: 1; 
-    /* Cal eliminar qualsevol 'transform' heretat si n'hi ha, encara que l'hem tret de l'estat inicial */
-    transform: none; 
+    /* 🌟 CANVI CLAU: Mou-lo al seu lloc visible (top: 0) */
+    transform: translateY(0); 
 }
 
-/* Animació de l'icona quan s'afegeix la classe 'obert' al botó */
-.hamburguesa.obert .barres:nth-child(1) {
-    transform: translateY(8.75px) rotate(45deg);
-}
-
-.hamburguesa.obert .barres:nth-child(2) {
-    opacity: 0; 
-}
-
-.hamburguesa.obert .barres:nth-child(3) {
-    transform: translateY(-8.75px) rotate(-45deg);
+.botó-tancar {
+    position: absolute;
+    top: 20px; /* Separació de la vora superior */
+    right: 20px; /* Separació de la vora dreta */
+    font-size: 2rem;
+    color: #5f1804;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10000; /* Assegura't que estigui per sobre de la resta del menú */
+    padding: 10px;
+    line-height: 1;
 }
