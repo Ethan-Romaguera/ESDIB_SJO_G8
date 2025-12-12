@@ -15,9 +15,38 @@
         <main> <!--crec que jo posaria es contingut amb un poc mes de marge que es header i es footer perque sino trob que queda raro-->
 
             <header>
+                <nav class="menu-navegacio"> 
+                    
+                    <button class="hamburguesa" id="menu-toggle" aria-expanded="false" aria-controls="menu-vertical">
+                        <span class="barres"></span>
+                        <span class="barres"></span>
+                        <span class="barres"></span>
+                    </button>
+
+                    <ul class="menu-vertical" id="menu-vertical">
+                        <button class="botó-tancar" id="menu-close" aria-label="Tancar menú">&times;</button>
+
+                        <li><a href="#">Veure tot</a></li>
+                        <li><a href="#">Restaurants</a></li>
+                        <li><a href="#">Cellers</a></li>
+                        <li><a href="#">Forns</a></li>
+
+                        <li><a href="#">Esdeveniments pròxims</a></li>
+                        <li><a href="#">Calendari</a></li>
+
+                        <li><a href="#">Pujar un local</a></li>
+                        <li><a href="#">Escriure un comentari</a></li>
+                        <li><a href="#">Contacte</a></li>
+                    </ul>
+                </nav>
                 <img src="./imatges/logo_daixonar.png" alt="Logo Daixonar" width="200">
                     <nav> 
-                        <!--aqui no se si hi anirien es menu, sa lupa y eso-->
+                        <button class="botons-cercar">
+                            <img src="imatges\botons_daixonar_lupa.png" alt="lupa">
+                        </button>
+                        <button class="botons-perfil">
+                            <img src="imatges/botons_daixonar_perfil.png" alt="perfil">
+                        </button>
                     </nav>
             </header>
             
@@ -45,7 +74,7 @@
                     <img src="imatges/fotogran1.jpg" alt="foto2">
                 </article>
         </main>
-        <footer>Peu de pagina </footer>
-
+        <footer>Peu de Pàgina</footer>
+    <script src="hamburguesa.js"></script>
     </body>
 </html>

@@ -11,14 +11,15 @@ body{
   align-items: center;
 }
 
-header{
+header {
   background-color: rgb(95 24 4);
   border-radius: 4rem;
   display:flex;
-  justify-content: space-between;
   align-items: center;
   margin-top: 2rem;
   margin-bottom: 4rem;
+  position: relative; 
+  width: 100%; /* S'ha afegit per a la gestió de l'amplada */
 }
 
 .carrusel {
@@ -84,11 +85,172 @@ h3{
 }
 
 footer{
-  width: 90%;
+  box-sizing: border-box; 
+  width: 100%; 
+  
   background-color:rgb(95 24 4);
-  border-radius: 4rem;
   color: white;
-  padding:2rem;
+  
+  padding: 3rem 2.5%; 
+  line-height: 1; 
+  
   margin-top:2rem;
-  margin-bottom:2rem;
+  /* 🌟 CANVI CLAU: Eliminar el marge inferior */
+  margin-bottom: 0; 
+  
+  /* 🌟 CANVI CLAU: Ara només les cantonades superiors tenen radius */
+  border-radius: 2rem 2rem 0 0; 
+  font-size: 30px;
+  font-weight: 700;
+  }
+
+.hamburguesa {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px; 
+    height: 25px; 
+    margin-right: 2px; 
+    margin-left: 20px;
+    z-index: 1000;
+    border: none; 
+    background: transparent; 
+    padding: 0;
+}
+
+.barres {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fbf5ee; 
+    border-radius: 1px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Estils per a la llista d'enllaços (el menú vertical) */
+.menu-vertical {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    padding-top: 100px; 
+    
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 65vh; 
+    
+    background-color: #fbf5ee; 
+    border-bottom: 1px solid ; 
+    box-shadow: none; 
+    z-index: 9999; 
+    
+    /* 🌟 CANVI CLAU: Assegura't que el contingut que desborda les 50vh no sigui visible */
+    overflow: hidden; 
+    
+    transform: translateY(-100%); 
+    transition: transform 0.5s ease-in-out; 
+    opacity: 1; 
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-vertical li a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.menu-vertical li a:hover {
+    background-color: #7293bc;
+}
+
+/* **ESTAT OBERT (CONTROLAT PER JAVASCRIPT)** */
+
+/* Quan la classe 'obert' s'afegeix al menú, es mostra */
+.menu-vertical.obert {
+    /* 🌟 CANVI CLAU: Mou-lo al seu lloc visible (top: 0) */
+    transform: translateY(0); 
+}
+
+.botó-tancar {
+    position: absolute;
+    top: 20px; /* Separació de la vora superior */
+    right: 20px; /* Separació de la vora dreta */
+    font-size: 2rem;
+    color: #5f1804;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10000; /* Assegura't que estigui per sobre de la resta del menú */
+    padding: 10px;
+    line-height: 1;
+}
+
+.botons-cercar {
+    /* Elimina l'estil de botó per defecte */
+    background: none; 
+    border: none;     
+    padding: 0;       
+    cursor: pointer;  
+    
+    /* Assegura que l'element es comporta bé */
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+    
+    /* Afegeix un petit espai entre els botons d'icona */
+    margin-left: 200px; 
+}
+
+/* Estils per a la imatge dins del botó */
+.botons-cercar img {
+    /* 🌟 Defineix la mida que vols que tinguin els botons */
+    width: 30px; 
+    height: 30px; 
+    border-radius: 0;  
+    
+    /* Per assegurar que la imatge no tingui marges estranys */
+    display: block; 
+}
+
+/* Opcional: Afegir un efecte visual en passar el ratolí */
+.botons-cercar:hover {
+    opacity: 0.7;
+}
+
+.botons-perfil {
+    /* Elimina l'estil de botó per defecte */
+    background: none; 
+    border: none;     
+    padding: 0;       
+    cursor: pointer;    
+    /* Assegura que l'element es comporta bé */
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+    
+    /* Afegeix un petit espai entre els botons d'icona */
+    margin-left: 30px; 
+}
+
+.botons-perfil img {
+    /* 🌟 Defineix la mida que vols que tinguin els botons */
+    width: 30px; 
+    height: 30px; 
+    border-radius: 0;  
+    
+    /* Per assegurar que la imatge no tingui marges estranys */
+    display: block; 
+}
+
+.botons-perfil:hover {
+    opacity: 0.7;
 }
