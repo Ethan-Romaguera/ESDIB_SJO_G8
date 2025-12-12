@@ -125,7 +125,11 @@ footer{
     height: 3px;
     background-color: #fbf5ee; 
     border-radius: 1px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.barres:hover {
+    opacity: 0.7;
 }
 
 /* Estils per a la llista d'enllaços (el menú vertical) */
@@ -208,6 +212,7 @@ footer{
     
     /* Afegeix un petit espai entre els botons d'icona */
     margin-left: 200px; 
+    transition: all 0.2s ease-in-out;
 }
 
 /* Estils per a la imatge dins del botó */
@@ -239,6 +244,7 @@ footer{
     
     /* Afegeix un petit espai entre els botons d'icona */
     margin-left: 30px; 
+    transition: all 0.2s ease-in-out;
 }
 
 .botons-perfil img {
