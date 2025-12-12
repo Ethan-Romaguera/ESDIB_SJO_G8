@@ -207,14 +207,14 @@ footer{
     justify-content: center;
     
     /* Afegeix un petit espai entre els botons d'icona */
-    margin-left: 175px; 
+    margin-left: 200px; 
 }
 
 /* Estils per a la imatge dins del botó */
 .botons-cercar img {
     /* 🌟 Defineix la mida que vols que tinguin els botons */
-    width: 40px; 
-    height: 40px; 
+    width: 30px; 
+    height: 30px; 
     border-radius: 0;  
     
     /* Per assegurar que la imatge no tingui marges estranys */
@@ -243,8 +243,8 @@ footer{
 
 .botons-perfil img {
     /* 🌟 Defineix la mida que vols que tinguin els botons */
-    width: 40px; 
-    height: 40px; 
+    width: 30px; 
+    height: 30px; 
     border-radius: 0;  
     
     /* Per assegurar que la imatge no tingui marges estranys */
