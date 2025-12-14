@@ -22,7 +22,7 @@ header {
   width: 100%; /* S'ha afegit per a la gestió de l'amplada */
 }
 
-.carrusel {
+.carrusel, .header-div {
   position: relative;
   width: 600px;
   max-width: 100%;
