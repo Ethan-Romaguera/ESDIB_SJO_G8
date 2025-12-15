@@ -95,7 +95,7 @@ footer{
   box-sizing: border-box; 
   width: 100%; 
   
-  background-color:rgb(95 24 4);
+  background-color: #5f1804;
   color: white;
   
   padding: 3rem 2.5%; 
@@ -147,7 +147,7 @@ footer{
     padding: 0;
     margin: 0;
     
-    padding-top: 100px; 
+    padding-top: 85px; 
     
     position: fixed; 
     top: 0; 
@@ -196,7 +196,6 @@ footer{
     position: absolute;
     top: 20px; /* Separació de la vora superior */
     right: 20px; /* Separació de la vora dreta */
-    font-size: 2rem;
     color: #5f1804;
     background: transparent;
     border: none;
@@ -204,6 +203,21 @@ footer{
     z-index: 10000; /* Assegura't que estigui per sobre de la resta del menú */
     padding: 10px;
     line-height: 1;
+}
+
+.botó-tancar img {
+    /* Defineix la mida que vols que tinguin els botons */
+    width: 25px; 
+    height: 25px; 
+    border-radius: 0;  
+    
+    /* Per assegurar que la imatge no tingui marges estranys */
+    display: block; 
+}
+
+/* Opcional: Afegir un efecte visual en passar el ratolí */
+.botó-tancar:hover {
+    opacity: 0.7;
 }
 
 .botons-cercar {
@@ -222,7 +236,6 @@ footer{
     margin-right: 30px; 
     transition: all 0.2s ease-in-out;
 }
-
 /* Estils per a la imatge dins del botó */
 .botons-cercar img {
     /* Defineix la mida que vols que tinguin els botons */
