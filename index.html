@@ -12,44 +12,40 @@
     </head>
 
     <body>
+        <header>
+            <nav class="menu-navegacio"> 
+                
+                <button class="hamburguesa" id="menu-toggle" aria-expanded="false" aria-controls="menu-vertical">
+                    <img src="imatges/botons_daixonar_barres.png" alt="barres">
+                </button>
+
+                <ul class="menu-vertical" id="menu-vertical">
+                    <button class="botó-tancar" id="menu-close" aria-label="Tancar menú">&times;</button>
+
+                    <li><a href="index.html">Veure tot</a></li>
+                    <li><a href="pag/restaurants.html">Restaurants</a></li>
+                    <li><a href="pag/cellers.html">Cellers</a></li>
+                    <li><a href="pag/forns.html">Forns</a></li>
+
+                    <li><a href="pag/esdeveniments.html">Esdeveniments pròxims</a></li>
+                    <li><a href="pag/calendari.html">Calendari</a></li>
+
+                    <li><a href="pag/pujar.html">Pujar un local</a></li>
+                    <li><a href="pag/comentaris.html">Escriure un comentari</a></li>
+                    <li><a href="pag/contacte.html">Contacte</a></li>
+                </ul>
+            </nav>
+            <img src="./imatges/logo_daixonar_flat.png" alt="Logo Daixonar" width="300">
+            <nav class="nav-iconos"> 
+                <button class="botons-cercar">
+                    <img src="imatges\botons_daixonar_lupa.png" alt="lupa">
+                </button>
+                <button class="botons-perfil">
+                    <img src="imatges/botons_daixonar_perfil.png" alt="perfil">
+                </button>
+            </nav>
+        </header>
         <main> <!--crec que jo posaria es contingut amb un poc mes de marge que es header i es footer perque sino trob que queda raro-->
-
-            <header>
-                <nav class="menu-navegacio"> 
-                    
-                    <button class="hamburguesa" id="menu-toggle" aria-expanded="false" aria-controls="menu-vertical">
-                        <span class="barres"></span>
-                        <span class="barres"></span>
-                        <span class="barres"></span>
-                    </button>
-
-                    <ul class="menu-vertical" id="menu-vertical">
-                        <button class="botó-tancar" id="menu-close" aria-label="Tancar menú">&times;</button>
-
-                        <li><a href="index.html">Veure tot</a></li>
-                        <li><a href="pag/restaurants.html">Restaurants</a></li>
-                        <li><a href="pag/cellers.html">Cellers</a></li>
-                        <li><a href="pag/forns.html">Forns</a></li>
-
-                        <li><a href="pag/esdeveniments.html">Esdeveniments pròxims</a></li>
-                        <li><a href="pag/calendari.html">Calendari</a></li>
-
-                        <li><a href="pag/pujar.html">Pujar un local</a></li>
-                        <li><a href="pag/comentaris.html">Escriure un comentari</a></li>
-                        <li><a href="pag/contacte.html">Contacte</a></li>
-                    </ul>
-                </nav>
-                <img src="./imatges/logo_daixonar.png" alt="Logo Daixonar" width="200">
-                    <nav> 
-                        <button class="botons-cercar">
-                            <img src="imatges\botons_daixonar_lupa.png" alt="lupa">
-                        </button>
-                        <button class="botons-perfil">
-                            <img src="imatges/botons_daixonar_perfil.png" alt="perfil">
-                        </button>
-                    </nav>
-            </header>
-            
             <div class="carrusel">  <!--Es un carrusel temporal, cuando tengamos JS lo cambiaremos-->
                 <div class="slide s1"><img src="imatges/nadalpalma.webp" alt="Imagen 1"></div>
                 <div class="slide s2"><img src="imatges/nadalpalma2.jpg" alt="Imagen 2"></div>
@@ -60,21 +56,22 @@
                 <source media="(min-width:850px)" srcset="imatges/fotogran1.jpg">
                 <source media="(max-width:849px)" srcset="imatges/katherine Hepburn.jpg" >
                 <img src="imatges/Cary Grant.jpg" alt="fotoescalable" >
-            </picture>  
+            </picture> 
+             
+            <article>
+                <h2>Destacats</h2>
+                <h3>Restaurants destacats del mes</h3>
+                <img src="imatges/fotogran1.jpg" alt="foto1">
+            </article>
 
-                <article>
-                    <h2>Destacats</h2>
-                    <h3>Restaurants destacats del mes</h3>
-                    <img src="imatges/fotogran1.jpg" alt="foto1">
-                </article>
-
-                <article>
-                    <h2>Destacats</h2>
-                    <h3>Events destacats del mes</h3>
-                    <img src="imatges/fotogran1.jpg" alt="foto2">
-                </article>
+            <article>
+                <h2>Destacats</h2>
+                <h3>Events destacats del mes</h3>
+                <img src="imatges/fotogran1.jpg" alt="foto2">
+            </article>
         </main>
         <footer>Peu de Pàgina</footer>
     <script src="js/hamburguesa.js"></script>
+    <script src="js/buscador.js"></script>
     </body>
 </html>
