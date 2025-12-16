@@ -39,13 +39,21 @@
             </nav>
             <img src="./imatges/logo_daixonar_flat.png" alt="Logo Daixonar" width="300">
             <nav class="nav-iconos"> 
-                <button class="botons-cercar">
+                <button class="botons-cercar" id="botons-cercar">
                     <img src="imatges\botons_daixonar_lupa.png" alt="lupa">
                 </button>
-                <a href="pag/perfil.html">
-                    <button class="botons-perfil">
+
+                <ul class="menu-vertical2" id="menu-vertical2">
+                    <button class="botó-tancar2" id="menu-close2" aria-label="Tancar menú">
+                        <img src="imatges/botons_daixonar_creu.png" alt="creu">
+                    </button>
+
+                    <form action="" method="GET" class="search-form">
+                        <input type="text" name="q" placeholder="Cercar Restaurants, Cellers, Fòrns..." class="search-input" id="campoBusqueda">
+                </ul>
+
+                <a href="pag/perfil.html" class="botons-perfil">
                     <img src="imatges/botons_daixonar_perfil.png" alt="perfil">
-                </button>
                 </a>
             </nav>
         </header>

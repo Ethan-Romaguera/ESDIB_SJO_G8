@@ -12,46 +12,55 @@
     </head>
 
     <body>
-        <main> <!--crec que jo posaria es contingut amb un poc mes de marge que es header i es footer perque sino trob que queda raro-->
+        <header>
+            <nav class="menu-navegacio"> 
+                
+                <button class="hamburguesa" id="menu-toggle" aria-expanded="false" aria-controls="menu-vertical">
+                    <img src="../imatges/botons_daixonar_barres.png" alt="barres">
+                </button>
 
-            <header>
-                <nav class="menu-navegacio"> 
-                    
-                    <button class="hamburguesa" id="menu-toggle" aria-expanded="false" aria-controls="menu-vertical">
-                        <span class="barres"></span>
-                        <span class="barres"></span>
-                        <span class="barres"></span>
+                <ul class="menu-vertical" id="menu-vertical">
+                    <button class="botó-tancar" id="menu-close" aria-label="Tancar menú">
+                        <img src="../imatges/botons_daixonar_creu.png" alt="creu">
                     </button>
 
-                    <ul class="menu-vertical" id="menu-vertical">
-                        <button class="botó-tancar" id="menu-close" aria-label="Tancar menú">&times;</button>
+                    <li><a href="../index.html">Veure tot</a></li>
+                    <li><a href="restaurants.html">Restaurants</a></li>
+                    <li><a href="cellers.html">Cellers</a></li>
+                    <li><a href="forns.html">Forns</a></li>
 
-                        <li><a href="../index.html">Veure tot</a></li>
-                        <li><a href="restaurants.html">Restaurants</a></li>
-                        <li><a href="cellers.html">Cellers</a></li>
-                        <li><a href="forns.html">Forns</a></li>
+                    <li><a href="esdeveniments.html">Esdeveniments pròxims</a></li>
+                    <li><a href="calendari.html">Calendari</a></li>
 
-                        <li><a href="esdeveniments.html">Esdeveniments pròxims</a></li>
-                        <li><a href="calendari.html">Calendari</a></li>
+                    <li><a href="pujar.html">Pujar un local</a></li>
+                    <li><a href="comentaris.html">Escriure un comentari</a></li>
+                    <li><a href="contacte.html">Contacte</a></li>
+                </ul>
+            </nav>
+            <img src="../imatges/logo_daixonar_flat.png" alt="Logo Daixonar" width="300">
+            <nav class="nav-iconos"> 
+                <button class="botons-cercar" id="botons-cercar">
+                    <img src="../imatges/botons_daixonar_lupa.png" alt="lupa">
+                </button>
 
-                        <li><a href="pujar.html">Pujar un local</a></li>
-                        <li><a href="comentaris.html">Escriure un comentari</a></li>
-                        <li><a href="contacte.html">Contacte</a></li>
-                    </ul>
-                </nav>
-                <img src="../imatges/logo_daixonar.png" alt="Logo Daixonar" width="200">
-                    <nav> 
-                        <button class="botons-cercar">
-                            <img src="../imatges\botons_daixonar_lupa.png" alt="lupa">
-                        </button>
-                        <button class="botons-perfil">
-                            <img src="../imatges/botons_daixonar_perfil.png" alt="perfil">
-                        </button>
-                    </nav>
-            </header>           
-            <div class="header-div"></div>
+                <ul class="menu-vertical2" id="menu-vertical2">
+                    <button class="botó-tancar2" id="menu-close2" aria-label="Tancar menú">
+                        <img src="../imatges/botons_daixonar_creu.png" alt="creu">
+                    </button>
+
+                    <form action="" method="GET" class="search-form">
+                        <input type="text" name="q" placeholder="Cercar Restaurants, Cellers, Fòrns..." class="search-input" id="campoBusqueda">
+                </ul>
+
+                <a href="perfil.html" class="botons-perfil">
+                    <img src="../imatges/botons_daixonar_perfil.png" alt="perfil">
+                </a>
+            </nav>
+        </header>
+        <main> <!--crec que jo posaria es contingut amb un poc mes de marge que es header i es footer perque sino trob que queda raro-->
         </main>
         <footer>Peu de Pàgina</footer>
     <script src="../js/hamburguesa.js"></script>
+    <script src="../js/buscador.js"></script>
     </body>
 </html>

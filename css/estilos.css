@@ -185,10 +185,58 @@ footer{
     background-color: #7293bc;
 }
 
+.menu-vertical.obert {
+    transform: translateY(0); 
+}
+
+.menu-vertical2 {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    padding-top: 85px; 
+    
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 10vh; 
+    
+    background-color: #fbf5ee; 
+    border-bottom: 1px solid ; 
+    box-shadow: none; 
+    z-index: 9999; 
+    
+    /* Assegura't que el contingut que desborda les 50vh no sigui visible */
+    overflow: hidden; 
+    
+    transform: translateY(-100%); 
+    transition: transform 0.5s ease-in-out; 
+    opacity: 1; 
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-vertical2 li a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.menu-vertical2 li a:hover {
+    background-color: #7293bc;
+}
 /* **ESTAT OBERT (CONTROLAT PER JAVASCRIPT)** */
 
 /* Quan la classe 'obert' s'afegeix al menú, es mostra */
-.menu-vertical.obert {
+
+
+.menu-vertical2.obert {
     transform: translateY(0); 
 }
 
@@ -217,6 +265,34 @@ footer{
 
 /* Opcional: Afegir un efecte visual en passar el ratolí */
 .botó-tancar:hover {
+    opacity: 0.7;
+}
+
+.botó-tancar2 {
+    position: absolute;
+    top: 20px; /* Separació de la vora superior */
+    right: 20px; /* Separació de la vora dreta */
+    color: #5f1804;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10000; /* Assegura't que estigui per sobre de la resta del menú */
+    padding: 10px;
+    line-height: 1;
+}
+
+.botó-tancar2 img {
+    /* Defineix la mida que vols que tinguin els botons */
+    width: 25px; 
+    height: 25px; 
+    border-radius: 0;  
+    
+    /* Per assegurar que la imatge no tingui marges estranys */
+    display: block; 
+}
+
+/* Opcional: Afegir un efecte visual en passar el ratolí */
+.botó-tancar2:hover {
     opacity: 0.7;
 }
 
@@ -288,4 +364,32 @@ footer{
 
 .menu-navegacio {
     margin-left: 10px;
+}
+
+.buscador-container {
+    padding: 30px;
+    border-radius: 12px;
+    background-color: #fbf5ee;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* --- Estilo del Formulario de Búsqueda --- */
+.search-form {
+    display: flex;
+}
+
+/* --- Estilo del Campo de Texto (Input) --- */
+.search-input {
+    flex-grow: 1; /* Ocupa todo el espacio disponible */
+    padding: 0px 20px;
+    border: none; /* Quitamos el borde nativo */
+    font-size: 30px;
+    outline: none; /* Quitamos el contorno al enfocar */
+    background-color: #fbf5ee;
+
+}
+
+.search-input::placeholder {
+    color: #999;
 }
