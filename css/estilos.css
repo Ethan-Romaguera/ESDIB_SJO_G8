@@ -1,0 +1,395 @@
+body{
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal; 
+  margin: 0 auto; 
+  width:100%;
+  background-color: rgb(251 245 238);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  background-color: rgb(95 24 4);
+  border-radius: 4rem;
+  display:flex;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  position: relative; 
+  width: 50%; /* S'ha afegit per a la gestió de l'amplada */
+  height: 100px;
+}
+
+@media (max-width: 768px) {
+    header {
+        width: 90%; /* Ocupa el 90% en pantallas pequeñas */
+}
+}
+
+.carrusel, .header-div {
+  position: relative;
+  width: 600px;
+  max-width: 100%;
+  height: 400px;
+  margin: auto;
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+
+.carrusel .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: fade 9s infinite;
+}
+
+.carrusel .s1 { animation-delay: 0s; }
+.carrusel .s2 { animation-delay: 3s; }
+.carrusel .s3 { animation-delay: 6s; }
+
+.carrusel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes fade {       /* Cuanto tengamos JS esto pasara a estar por allí */
+  0%   { opacity: 0; }
+  10%  { opacity: 1; }
+  30%  { opacity: 1; }
+  40%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+h1{
+  padding-left:4rem;
+  color:white;
+  font-size: 3rem;
+}
+
+img{
+  border-radius: 3rem;
+}
+
+h2{
+  font-family: "vastago", "arial", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 2rem;
+  line-height: 1.2rem;
+}
+
+h3{
+  font-family: "vastago", "arial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.2rem;
+}
+
+footer{
+  box-sizing: border-box; 
+  width: 100%; 
+  
+  background-color: #5f1804;
+  color: white;
+  
+  padding: 3rem 2.5%; 
+  line-height: 1; 
+  
+  margin-top:2rem;
+  margin-bottom: 0; 
+  
+  /* Només les cantonades superiors tenen radius */
+  border-radius: 2rem 2rem 0 0; 
+  font-size: 30px;
+  font-weight: 700;
+  }
+
+.hamburguesa {
+    /* Elimina l'estil de botó per defecte */
+    background: none; 
+    border: none;     
+    padding: 0;       
+    cursor: pointer;  
+    
+    /* Assegura que l'element es comporta bé */
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+    
+    /* Afegeix un petit espai entre els botons d'icona */
+    margin-left: 30px; 
+    transition: all 0.2s ease-in-out;
+}
+
+.hamburguesa img {
+    /* Defineix la mida que vols que tinguin els botons */
+    width: 45px; 
+    height: 45px; 
+    border-radius: 0;  
+    
+    /* Per assegurar que la imatge no tingui marges estranys */
+    display: block; 
+}
+
+.hamburguesa:hover {
+    opacity: 0.7;
+}
+
+/* Estils per a la llista d'enllaços (el menú vertical) */
+.menu-vertical {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    padding-top: 85px; 
+    
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 65vh; 
+    
+    background-color: #fbf5ee; 
+    border-bottom: 1px solid ; 
+    box-shadow: none; 
+    z-index: 9999; 
+    
+    /* Assegura't que el contingut que desborda les 50vh no sigui visible */
+    overflow: hidden; 
+    
+    transform: translateY(-100%); 
+    transition: transform 0.5s ease-in-out; 
+    opacity: 1; 
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-vertical li a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.menu-vertical li a:hover {
+    background-color: #7293bc;
+}
+
+.menu-vertical.obert {
+    transform: translateY(0); 
+}
+
+.menu-vertical2 {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    padding-top: 85px; 
+    
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 10vh; 
+    
+    background-color: #fbf5ee; 
+    border-bottom: 1px solid ; 
+    box-shadow: none; 
+    z-index: 9999; 
+    
+    /* Assegura't que el contingut que desborda les 50vh no sigui visible */
+    overflow: hidden; 
+    
+    transform: translateY(-100%); 
+    transition: transform 0.5s ease-in-out; 
+    opacity: 1; 
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-vertical2 li a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.menu-vertical2 li a:hover {
+    background-color: #7293bc;
+}
+/* **ESTAT OBERT (CONTROLAT PER JAVASCRIPT)** */
+
+/* Quan la classe 'obert' s'afegeix al menú, es mostra */
+
+
+.menu-vertical2.obert {
+    transform: translateY(0); 
+}
+
+.botó-tancar {
+    position: absolute;
+    top: 20px; /* Separació de la vora superior */
+    right: 20px; /* Separació de la vora dreta */
+    color: #5f1804;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10000; /* Assegura't que estigui per sobre de la resta del menú */
+    padding: 10px;
+    line-height: 1;
+}
+
+.botó-tancar img {
+    /* Defineix la mida que vols que tinguin els botons */
+    width: 25px; 
+    height: 25px; 
+    border-radius: 0;  
+    
+    /* Per assegurar que la imatge no tingui marges estranys */
+    display: block; 
+}
+
+/* Opcional: Afegir un efecte visual en passar el ratolí */
+.botó-tancar:hover {
+    opacity: 0.7;
+}
+
+.botó-tancar2 {
+    position: absolute;
+    top: 20px; /* Separació de la vora superior */
+    right: 20px; /* Separació de la vora dreta */
+    color: #5f1804;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10000; /* Assegura't que estigui per sobre de la resta del menú */
+    padding: 10px;
+    line-height: 1;
+}
+
+.botó-tancar2 img {
+    /* Defineix la mida que vols que tinguin els botons */
+    width: 25px; 
+    height: 25px; 
+    border-radius: 0;  
+    
+    /* Per assegurar que la imatge no tingui marges estranys */
+    display: block; 
+}
+
+/* Opcional: Afegir un efecte visual en passar el ratolí */
+.botó-tancar2:hover {
+    opacity: 0.7;
+}
+
+.botons-cercar {
+    /* Elimina l'estil de botó per defecte */
+    background: none; 
+    border: none;     
+    padding: 0;       
+    cursor: pointer;  
+    
+    /* Assegura que l'element es comporta bé */
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+    
+    /* Afegeix un petit espai entre els botons d'icona */
+    margin-right: 30px; 
+    transition: all 0.2s ease-in-out;
+}
+/* Estils per a la imatge dins del botó */
+.botons-cercar img {
+    /* Defineix la mida que vols que tinguin els botons */
+    width: 40px; 
+    height: 40px; 
+    border-radius: 0;  
+    
+    /* Per assegurar que la imatge no tingui marges estranys */
+    display: block; 
+}
+
+/* Opcional: Afegir un efecte visual en passar el ratolí */
+.botons-cercar:hover {
+    opacity: 0.7;
+}
+
+.botons-perfil {
+    /* Elimina l'estil de botó per defecte */
+    background: none; 
+    border: none;     
+    padding: 0;       
+    cursor: pointer;    
+    /* Assegura que l'element es comporta bé */
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+    
+    /* Afegeix un petit espai entre els botons d'icona */
+    margin-right: 50px;
+    transition: all 0.2s ease-in-out;
+}
+
+.botons-perfil img {
+    /* Defineix la mida que vols que tinguin els botons */
+    width: 40px; 
+    height: 40px; 
+    border-radius: 0;  
+    
+    /* Per assegurar que la imatge no tingui marges estranys */
+    display: block; 
+}
+
+.botons-perfil:hover {
+    opacity: 0.7;
+}
+
+.nav-iconos {
+    margin-left: auto;
+}
+
+.menu-navegacio {
+    margin-left: 10px;
+}
+
+.buscador-container {
+    padding: 30px;
+    border-radius: 12px;
+    background-color: #fbf5ee;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* --- Estilo del Formulario de Búsqueda --- */
+.search-form {
+    display: flex;
+}
+
+/* --- Estilo del Campo de Texto (Input) --- */
+.search-input {
+    flex-grow: 1; /* Ocupa todo el espacio disponible */
+    padding: 0px 20px;
+    border: none; /* Quitamos el borde nativo */
+    font-size: 30px;
+    outline: none; /* Quitamos el contorno al enfocar */
+    background-color: #fbf5ee;
+
+}
+
+.search-input::placeholder {
+    color: #999;
+}
